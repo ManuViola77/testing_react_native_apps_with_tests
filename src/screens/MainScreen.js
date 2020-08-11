@@ -16,11 +16,13 @@ const MainScreen = ({navigation}) => {
     ]);
   };
   return (
-    <SafeAreaView>
-      <TouchableOpacity onPress={goToAnotherScreen}>
+    <SafeAreaView testID="MainScreen">
+      <TouchableOpacity
+        onPress={goToAnotherScreen}
+        testID="button-to-another-screen">
         <Text>Press here to go to another screen</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={showAlert}>
+      <TouchableOpacity onPress={showAlert} testID="alert-button">
         <Text>Press to show alert</Text>
       </TouchableOpacity>
     </SafeAreaView>
