@@ -1,6 +1,6 @@
 module.exports = {
   preset: 'react-native',
-  modulePathIgnorePatterns: ['extras', '__mocks__'],
+  modulePathIgnorePatterns: ['extras'],
   setupFiles: [
     '<rootDir>/node_modules/react-native-gesture-handler/jestSetup.js',
   ],
