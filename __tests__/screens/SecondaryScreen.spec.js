@@ -2,16 +2,16 @@ import {act, fireEvent, waitFor} from '@testing-library/react-native';
 
 import {screenParameters} from '../extras/data';
 import {renderWithNavigation} from '../extras/helpers';
-import AnotherScreen from '../../src/screens/AnotherScreen';
+import SecondaryScreen from '../../src/screens/SecondaryScreen';
 import MainScreen from '../../src/screens/MainScreen';
 
-describe('<AnotherScreen />', () => {
+describe('<SecondaryScreen />', () => {
   let wrapper;
 
   const otherComponents = [{name: 'MainScreen', component: MainScreen}];
 
   beforeEach(() => {
-    wrapper = renderWithNavigation(AnotherScreen, {
+    wrapper = renderWithNavigation(SecondaryScreen, {
       otherComponents,
       screenConfig: {
         initialParams: screenParameters,
@@ -19,8 +19,8 @@ describe('<AnotherScreen />', () => {
     });
   });
 
-  it('should render AnotherScreen', () => {
-    expect(wrapper.queryByTestId('AnotherScreen')).toBeTruthy();
+  it('should render SecondaryScreen', () => {
+    expect(wrapper.queryByTestId('SecondaryScreen')).toBeTruthy();
   });
 
   it('should render the go back button', () => {

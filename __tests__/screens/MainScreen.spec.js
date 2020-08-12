@@ -15,17 +15,17 @@ describe('<MainScreen />', () => {
     expect(wrapper.queryByTestId('MainScreen')).toBeTruthy();
   });
 
-  it('should render the go to another screen button', () => {
-    expect(wrapper.queryByTestId('button-to-another-screen')).toBeTruthy();
+  it('should render the go to secondary screen button', () => {
+    expect(wrapper.queryByTestId('button-to-secondary-screen')).toBeTruthy();
   });
 
-  describe('when go to another screen button is pressed', () => {
-    it('it should render AnotherScreen ', async () => {
+  describe('when go to secondary screen button is pressed', () => {
+    it('it should render SecondaryScreen ', async () => {
       act(() => {
-        fireEvent.press(wrapper.queryByTestId('button-to-another-screen'));
+        fireEvent.press(wrapper.queryByTestId('button-to-secondary-screen'));
       });
       await waitFor(() =>
-        expect(wrapper.queryByTestId('AnotherScreen')).toBeTruthy(),
+        expect(wrapper.queryByTestId('SecondaryScreen')).toBeTruthy(),
       );
     });
   });

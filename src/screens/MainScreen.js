@@ -3,8 +3,8 @@ import {Alert, SafeAreaView, Text, TouchableOpacity} from 'react-native';
 import styles from './styles';
 
 const MainScreen = ({navigation}) => {
-  const goToAnotherScreen = () =>
-    navigation.navigate('AnotherScreen', {
+  const goToSecondaryScreen = () =>
+    navigation.navigate('SecondaryScreen', {
       paramOne: 'This is a parameter that is a text',
       paramTwo: {
         content: 'This is a parameter that is an object with a content',
@@ -20,11 +20,11 @@ const MainScreen = ({navigation}) => {
   return (
     <SafeAreaView testID="MainScreen">
       <TouchableOpacity
-        onPress={goToAnotherScreen}
+        onPress={goToSecondaryScreen}
         style={styles.button}
-        testID="button-to-another-screen">
+        testID="button-to-secondary-screen">
         <Text style={styles.buttonText}>
-          Press here to go to another screen
+          Press here to go to Secondary Screen
         </Text>
       </TouchableOpacity>
       <TouchableOpacity

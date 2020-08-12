@@ -3,21 +3,21 @@ import {SafeAreaView, Text, TouchableOpacity} from 'react-native';
 
 import styles from './styles';
 
-const AnotherScreen = ({navigation, route}) => {
+const SecondaryScreen = ({navigation, route}) => {
   const {
     paramOne,
     paramTwo: {content},
   } = route.params;
 
   return (
-    <SafeAreaView testID="AnotherScreen">
+    <SafeAreaView testID="SecondaryScreen">
       <TouchableOpacity
         onPress={() => navigation.navigate('MainScreen')}
         testID="back-button">
         <Text style={styles.backButton}>Back</Text>
       </TouchableOpacity>
       <Text style={styles.title} testID="title">
-        This is another Screen
+        This is Secondary Screen
       </Text>
       {!!paramOne && (
         <Text style={styles.text} testID="param-one">
@@ -33,4 +33,4 @@ const AnotherScreen = ({navigation, route}) => {
   );
 };
 
-export default AnotherScreen;
+export default SecondaryScreen;
