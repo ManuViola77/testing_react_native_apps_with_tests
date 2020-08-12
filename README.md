@@ -1,5 +1,6 @@
 # How to Test React Native Apps (with tests)
-This project was created for the tutorial "How to Test React Native Apps". This include the tests made in the tutorial.
+This project was created for the tutorial "How to Test React Native Apps". This include the tests made in the tutorial. 
+If you want the project without tests to follow the tutorial, you can go to [this git repository](https://github.com/ManuViola77/testing_react_native_apps).
 
 ## Instalation steps
 
